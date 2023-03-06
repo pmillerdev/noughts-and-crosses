@@ -5,16 +5,16 @@ import Square from "./Square";
 
 type BoardProps = {
   winner: string | null;
-  playerX: boolean;
+  crossIsPlaying: boolean;
   squares: Array<string | null>;
-  handlePlayer: (i: number) => void;
+  handleSetSquare: (i: number) => void;
   handleRestartGame: () => void;
 };
 
 const Board = ({
   winner,
-  playerX,
-  handlePlayer,
+  crossIsPlaying,
+  handleSetSquare,
   handleRestartGame,
   squares,
 }: BoardProps) => {
@@ -33,7 +33,7 @@ const Board = ({
   const renderSquare = (i: number): JSX.Element => (
     <Square
       value={setSquareValue(i)}
-      onClick={() => handlePlayer(i)}
+      onClick={() => handleSetSquare(i)}
       winner={winner}
     />
   );
@@ -43,7 +43,7 @@ const Board = ({
       <div className="board">
         <div className=" w-[300px] md:[w-400px] rounded-lg flex items-center justify-center space-x-10">
           <div>
-            {playerX ? (
+            {crossIsPlaying ? (
               <div className="text-white bg-gray-700 text-xl px-4 py-1 w-28 rounded-lg font-medium uppercase">
                 <span className="text-[#30c4bd] text-2xl font-bold">X</span>{" "}
                 Turn

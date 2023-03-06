@@ -6,7 +6,7 @@ type SquareProps = {
   onClick: () => void;
 };
 
-const Square = ({ value, onClick, winner }: SquareProps) => (
+const Square = ({ value, onClick, winner }: SquareProps): JSX.Element => (
   <button className="square" onClick={onClick} disabled={winner ? true : false}>
     {value}
   </button>
