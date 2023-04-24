@@ -19,7 +19,7 @@ const ChoosePlayer = ({
         <p className="text-md text-gray-300 uppercase font-semibold  md:text-xl ">
           Please Select
           {"  "}
-          <span className="text-[#f3b236] text-xl font-bold">O (naughts)</span>
+          <span className="text-[#f3b236] text-xl font-bold">O (noughts)</span>
           {"  "}
           or
           {"  "}
