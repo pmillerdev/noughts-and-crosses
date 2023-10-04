@@ -2,4 +2,7 @@
 
 Noughts and crosses (aka Tic Tac Toe in the US) game written with React, Next, TypeScript and Tailwind CSS.
 
-Deployed [here](https://noughts-and-crosses-pm.netlify.app/)
+## Running Locally
+
+1. `pnpm i`
+2. `pnpm dev`
