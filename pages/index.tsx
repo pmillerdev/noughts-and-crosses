@@ -13,11 +13,11 @@ const Home: NextPage = () => {
     Array(9).fill(null)
   );
 
-  const handleChooseCross = (): void => setIsCross(true);
+  const handleChooseCross = () => setIsCross(true);
 
-  const handleChooseNaught = (): void => setIsCross(false);
+  const handleChooseNaught = () => setIsCross(false);
 
-  const handleSetSquare = (i: number): void => {
+  const handleSetSquare = (i: number) => {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
@@ -27,17 +27,17 @@ const Home: NextPage = () => {
     setIsCross(!isCross);
   };
 
-  const handleRestartGame = (): void => {
+  const handleRestartGame = () => {
     setIsCross(true);
     setSquares(Array(9).fill(null));
   };
 
-  const handleNewGame = (): void => {
+  const handleNewGame = () => {
     handleRestartGame();
     setNewGame(true);
   };
 
-  const handleQuitGame = (): void => {
+  const handleQuitGame = () => {
     handleRestartGame();
     setNewGame(false);
   };
