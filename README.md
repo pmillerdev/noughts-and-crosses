@@ -1,6 +1,8 @@
 # Noughts and Crosses
 
-Noughts and crosses (aka Tic Tac Toe in the US) game written with React, Next, TypeScript and Tailwind CSS.
+Noughts and crosses (Tic Tac Toe in the US) game.
+
+Technologies used: React, Next, TypeScript, Tailwind CSS.
 
 ## Running Locally
 

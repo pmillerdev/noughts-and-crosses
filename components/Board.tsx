@@ -1,5 +1,5 @@
-import React, { memo } from "react";
-import NaughtIcon from "./NaughtIcon";
+import { memo } from "react";
+import NoughtIcon from "./NoughtIcon";
 import CrossIcon from "./CrossIcon";
 import Square from "./Square";
 
@@ -24,7 +24,7 @@ const Board = ({
       case "X":
         return <CrossIcon />;
       case "O":
-        return <NaughtIcon />;
+        return <NoughtIcon />;
       default:
         return null;
     }

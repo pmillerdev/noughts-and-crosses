@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useState } from "react";
 import Board from "../components/Board";
 import ChoosePlayer from "../components/ChoosePlayer";
 import WinnerModal from "../components/WinnerModal";
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
   const handleChooseCross = () => setIsCross(true);
 
-  const handleChooseNaught = () => setIsCross(false);
+  const handleChooseNought = () => setIsCross(false);
 
   const handleSetSquare = (i: number) => {
     if (calculateWinner(squares) || squares[i]) {
@@ -42,7 +42,7 @@ const Home: NextPage = () => {
     setNewGame(false);
   };
 
-  let winner = calculateWinner(squares);
+  const winner = calculateWinner(squares);
 
   return (
     <div className="flex min-h-screen bg-[#192a32] flex-col items-center  py-2">
@@ -55,19 +55,19 @@ const Home: NextPage = () => {
         <span className="text-[#f3b236]">Noughts</span> &amp; Crosses
       </h1>
 
-      {!newGame ? (
-        <ChoosePlayer
-          handleNewGame={handleNewGame}
-          handleChooseCross={handleChooseCross}
-          handleChooseNaught={handleChooseNaught}
-        />
-      ) : (
+      {newGame ? (
         <Board
           winner={winner}
           crossIsPlaying={isCross}
           squares={squares}
           handleSetSquare={handleSetSquare}
           handleRestartGame={handleRestartGame}
+        />
+      ) : (
+        <ChoosePlayer
+          handleNewGame={handleNewGame}
+          handleChooseCross={handleChooseCross}
+          handleChooseNought={handleChooseNought}
         />
       )}
       {winner && (

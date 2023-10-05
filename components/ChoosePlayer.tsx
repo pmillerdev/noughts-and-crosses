@@ -1,17 +1,17 @@
-import React, { memo } from "react";
-import NaughtIcon from "./NaughtIcon";
+import { memo } from "react";
+import NoughtIcon from "./NoughtIcon";
 import CrossIcon from "./CrossIcon";
 
 type ChoosePlayerProps = {
   handleChooseCross: () => void;
-  handleChooseNaught: () => void;
+  handleChooseNought: () => void;
   handleNewGame: () => void;
 };
 
 const ChoosePlayer = ({
   handleChooseCross,
   handleNewGame,
-  handleChooseNaught,
+  handleChooseNought,
 }: ChoosePlayerProps): JSX.Element => {
   return (
     <div className="mt-20 md:mt-16 md:w-[500px] flex flex-col items-center justofy-center mx-auto">
@@ -27,10 +27,10 @@ const ChoosePlayer = ({
         </p>
         <div className="w-3/4 bg-gray-800  flex items-center justify-evenly h-24 rounded-2xl p-6 ">
           <button
-            onClick={handleChooseNaught}
+            onClick={handleChooseNought}
             className="focus:bg-gray-300 hover:bg-[#ffe1a9] trasnsition duartion-300 ease-in flex items-center justify-center rounded-xl px-6 py-2 "
           >
-            <NaughtIcon />
+            <NoughtIcon />
           </button>
           <button
             onClick={handleChooseCross}
